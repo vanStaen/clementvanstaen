@@ -6,7 +6,7 @@
     - [x] GET
     - [ ] DELETE
     - [ ] POST
-    - [ ] PATCH
+    - [ ] UPDATE
  
 ## Completed ✓
 
