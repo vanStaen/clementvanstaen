@@ -1,0 +1,10 @@
+{
+  "short_name": "Clément van Staen",
+  "name": "Clément van Staen",
+  "description" : "Clément van Staen",
+  "start_url": "https://clementvanstaen.com",
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "clipboardWrite": true
+}
