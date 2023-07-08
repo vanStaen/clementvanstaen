@@ -4,6 +4,7 @@ import { observer } from "mobx-react";
 
 import InstaLogo from "../../../img/logos/instaLogo.png";
 import ResidentAdvisorLogo from "../../../img/logos/residentAdvisorLogo.png";
+import SpotifyLogo from "../../../img/logos/spotifyLogo.png";
 import SoundcloudLogo from "../../../img/logos/soundcloudLogo.png";
 
 import "./MyLinks.less";
@@ -27,8 +28,18 @@ export const MyLinks = observer(() => {
       </div>
       <div className="link">
         <Tooltip title="Soundcloud" color="tomato">
-          <a href="Gensen" target="_blank">
+          <a href="https://soundcloud.com/vanstaenmusic" target="_blank">
             <img src={SoundcloudLogo} className="logoSoundcloud" />
+          </a>
+        </Tooltip>
+      </div>
+      <div className="link">
+        <Tooltip title="Spotify" color="tomato">
+          <a
+            href="https://open.spotify.com/intl-de/artist/0dsj1Ni4YlrtmcySPpnrhp"
+            target="_blank"
+          >
+            <img src={SpotifyLogo} className="logoSpotify" />
           </a>
         </Tooltip>
       </div>
