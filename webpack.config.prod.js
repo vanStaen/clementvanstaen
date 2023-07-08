@@ -23,6 +23,7 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [
+        { from: "public/avatar.jpg" },
         { from: "public/manifest.webmanifest" },
       ],
     }),

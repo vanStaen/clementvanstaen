@@ -1,10 +1,16 @@
 import React from "react";
 import { observer } from "mobx-react";
 
-import { OrbitText } from "../OrbitText/OrbitText";
+import { RevolvingText } from "./RevolvingText/RevolvingText";
 
 import "./Welcome.less";
 
 export const Welcome = observer(() => {
-  return <>Hello world!</>;
+  return (
+    <div className="container">
+      <div className="welcome">
+        <RevolvingText />
+      </div>
+    </div>
+  );
 });
