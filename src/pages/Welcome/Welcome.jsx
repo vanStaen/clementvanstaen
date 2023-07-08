@@ -11,6 +11,7 @@ export const Welcome = observer(() => {
       <div className="welcome">
         <RevolvingText />
       </div>
+      <div className="background"></div>
     </div>
   );
 });
