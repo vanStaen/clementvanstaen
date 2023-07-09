@@ -59,7 +59,7 @@ export const MyLinks = observer(() => {
       <LinkElement
         name="Spotify"
         logo={SpotifyLogo}
-        color="rgba(29, 185, 84, 1)"
+        color="rgba(29, 185, 84, .9)"
         links={[
           {
             key: 6,
@@ -86,7 +86,7 @@ export const MyLinks = observer(() => {
       <LinkElement
         name="Soundcloud"
         logo={SoundcloudLogo}
-        color="rgba(242, 111, 35, 1)"
+        color="rgba(242, 111, 35, .9)"
         links={[
           {
             key: 10,
@@ -108,7 +108,7 @@ export const MyLinks = observer(() => {
       <LinkElement
         name="Youtube"
         logo={YoutubeLogo}
-        color="rgba(255, 0, 0, 1)"
+        color="rgba(255, 0, 0, .9)"
         links={[
           {
             key: 13,
