@@ -45,7 +45,7 @@ export const MyLinks = observer(() => {
         </a>
       </div>
       <div className="link">
-        <a href="https://github.com/vanStaen/clementvanstaen" target="_blank">
+        <a href="https://github.com/vanStaen/" target="_blank">
           <Tooltip title="Github" color="tomato">
             <img src={GithubLogo} className="logo" />
           </Tooltip>
