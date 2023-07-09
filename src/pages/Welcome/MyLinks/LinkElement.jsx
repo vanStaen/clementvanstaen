@@ -4,7 +4,7 @@ import { observer } from "mobx-react";
 import "./LinkElement.less";
 
 export const LinkElement = observer((props) => {
-  const handleMouseEnter = (element) => {
+  const handleMouseEnterItem = (element) => {
     const item = document.getElementById(element);
     const isRadialGradient = props.color.substring(0, 15) === "radial-gradient";
     if (isRadialGradient) {
@@ -14,20 +14,29 @@ export const LinkElement = observer((props) => {
     }
   };
 
-  const handleMouseLeave = (element) => {
+  const handleMouseLeaveItem = (element) => {
     const item = document.getElementById(element);
     item.style.background = "none";
     item.style.backgroundColor = "white";
   };
 
+  const handleMouseEnterContainer = (element) => {
+    const container = document.getElementById(element);
+    container.style.filter = "grayscale(0)";
+  };
+
+  const handleMouseLeaveContainer = (element) => {
+    const container = document.getElementById(element);
+    container.style.filter = "grayscale(1)";
+  };
   const formatedSubMenu = props.links.map((link) => {
     return (
       <div className="subMenuItem">
         <div
           className="item"
           id={`item_${link.key}`}
-          onMouseEnter={() => handleMouseEnter(`item_${link.key}`)}
-          onMouseLeave={() => handleMouseLeave(`item_${link.key}`)}
+          onMouseEnter={() => handleMouseEnterItem(`item_${link.key}`)}
+          onMouseLeave={() => handleMouseLeaveItem(`item_${link.key}`)}
         >
           <a href={link.url} target="_blank" className="item">
             {link.account}
@@ -49,8 +58,12 @@ export const LinkElement = observer((props) => {
 
   return (
     <div className="link">
-      <div className="container">
-        <img className="logo" src={props.logo} />
+      <div
+        className="container"
+        onMouseEnter={() => handleMouseEnterContainer(`logo_${props.name}`)}
+        onMouseLeave={() => handleMouseLeaveContainer(`logo_${props.name}`)}
+      >
+        <img className="logo" src={props.logo} id={`logo_${props.name}`} />
         <div className="subContainer">{formatedSubMenu}</div>
       </div>
     </div>

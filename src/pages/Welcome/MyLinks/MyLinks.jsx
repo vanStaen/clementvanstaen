@@ -5,7 +5,7 @@ import InstaLogo from "../../../img/logos/instaLogo.png";
 import SpotifyLogo from "../../../img/logos/spotifyLogo.png";
 import SoundcloudLogo from "../../../img/logos/soundcloudLogo.png";
 import YoutubeLogo from "../../../img/logos/youtubeLogo.png";
-import GithubLogo from "../../../img/logos/githubLogo.png";
+//import GithubLogo from "../../../img/logos/githubLogo.png";
 
 import { LinkElement } from "./LinkElement";
 
@@ -27,7 +27,7 @@ export const MyLinks = observer(() => {
       <LinkElement
         name="Instagram"
         logo={InstaLogo}
-        color="radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)"
+        color="radial-gradient(circle at 30% 107%, #faea3a 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)"
         links={[
           {
             key: 1,
@@ -86,7 +86,7 @@ export const MyLinks = observer(() => {
       <LinkElement
         name="Soundcloud"
         logo={SoundcloudLogo}
-        color="rgba(242, 111, 35, .9)"
+        color="rgba(242, 111, 35, .91)"
         links={[
           {
             key: 10,
@@ -108,7 +108,7 @@ export const MyLinks = observer(() => {
       <LinkElement
         name="Youtube"
         logo={YoutubeLogo}
-        color="rgba(255, 0, 0, .9)"
+        color="rgba(255, 0, 0, 1)"
         links={[
           {
             key: 13,
