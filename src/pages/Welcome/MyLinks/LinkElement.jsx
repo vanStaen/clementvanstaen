@@ -29,6 +29,7 @@ export const LinkElement = observer((props) => {
     const container = document.getElementById(element);
     container.style.filter = "grayscale(1)";
   };
+
   const formatedSubMenu = props.links.map((link) => {
     return (
       <div className="subMenuItem">
@@ -64,7 +65,10 @@ export const LinkElement = observer((props) => {
         onMouseLeave={() => handleMouseLeaveContainer(`logo_${props.name}`)}
       >
         <img className="logo" src={props.logo} id={`logo_${props.name}`} />
-        <div className="subContainer">{formatedSubMenu}</div>
+        <div className="subContainer">
+          {formatedSubMenu}
+          <div className="name">{props.name}</div>
+        </div>
       </div>
     </div>
   );
