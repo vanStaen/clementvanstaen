@@ -56,7 +56,6 @@ export const RevolvingText = observer(() => {
       word.appendChild(letter);
       letters.push(letter);
     }
-    console.log("letters", letters);
     wordArray.push(letters);
   }
 
@@ -77,6 +76,7 @@ export const RevolvingText = observer(() => {
         <span className="word">Musician</span>
         <span className="word">Woodworker</span>
         <span className="word">Photographer</span>
+        <span className="word">Artist</span>
       </p>
     </div>
   );
