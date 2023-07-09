@@ -14,7 +14,7 @@ import "./MyLinks.less";
 export const MyLinks = observer(() => {
   return (
     <div className="containerLink">
-      <LinkElement
+      {/*<LinkElement
         name="Github"
         logo={GithubLogo}
         links={[
@@ -23,7 +23,7 @@ export const MyLinks = observer(() => {
             url: "https://github.com/vanStaen/",
           },
         ]}
-      />
+      />*/}
       <LinkElement
         name="Instagram"
         logo={InstaLogo}
@@ -65,6 +65,10 @@ export const MyLinks = observer(() => {
           {
             account: "Wilhelm Harakiri",
             url: "https://open.spotify.com/intl-de/artist/4KLcngF6tGCMbB8fA2uWqn",
+          },
+          {
+            account: "The Antiquariat",
+            url: "https://open.spotify.com/intl-de/artist/5qGLaOu3xYCxklHmJuiFso",
           },
         ]}
       />
