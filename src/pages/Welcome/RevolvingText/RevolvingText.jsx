@@ -56,6 +56,7 @@ export const RevolvingText = observer(() => {
       word.appendChild(letter);
       letters.push(letter);
     }
+    console.log("letters", letters);
     wordArray.push(letters);
   }
 
@@ -64,8 +65,7 @@ export const RevolvingText = observer(() => {
     for (var i = 0; i < words.length; i++) {
       splitLetters(words[i]);
     }
-    changeWord();
-    setInterval(changeWord, 4000);
+    setInterval(changeWord, 3000);
   }, []);
 
   return (
