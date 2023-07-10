@@ -5,7 +5,7 @@ import animationStyles from "react-awesome-slider/src/styled/cube-animation/cube
 
 import { Welcome } from "./Welcome/Welcome";
 
-export const Slider = () => {
+export const Main = () => {
   return (
     <div>
       <AwesomeSlider
