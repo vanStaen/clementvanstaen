@@ -8,11 +8,19 @@
         height: 1em;
         filter: grayscale(1);
     }     
+
+    @media only screen and (max-width: 600px) {
+        .logo {
+            width: 1.25em;
+            height: 1.25em;
+        }
+    }
     
     .container {
         display: flex;
         justify-content: right;
         align-items: bottom;
+    }
 
     .subContainer {
         display: none;
@@ -26,8 +34,12 @@
         font-size: 17px;
         border: 1px solid transparent;
     }
-        
-    } 
+
+    @media only screen and (max-width: 600px) {
+        .subContainer {
+            padding-top: 1em;
+        }
+    }
 
     .item {
         display: inline-block;
@@ -37,6 +49,12 @@
         color: black;
         text-decoration: none;
     }
+
+    @media (hover: none) {
+        .item a {
+            background-color: rgba(255,255,255, .75);
+        }
+      }
 
     .item:hover {
         color: #FFF;

@@ -17,7 +17,9 @@ export const Slider = () => {
         <div id="welcomePage">
           <Welcome />
         </div>
-        <div id="placeholder">2</div>
+        <div id="placeholder1">placeholder 1</div>
+        <div id="placeholder2">placeholder 2</div>
+        <div id="placeholder3">placeholder 3</div>
       </AwesomeSlider>
     </div>
   );

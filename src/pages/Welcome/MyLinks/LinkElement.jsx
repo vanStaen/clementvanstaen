@@ -17,7 +17,7 @@ export const LinkElement = observer((props) => {
   const handleMouseLeaveItem = (element) => {
     const item = document.getElementById(element);
     item.style.background = "none";
-    item.style.backgroundColor = "white";
+    item.style.backgroundColor = "none";
   };
 
   const handleMouseEnterContainer = (element) => {
