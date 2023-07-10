@@ -1,16 +1,16 @@
 # clementvanstaen
-
 private showcase page
 
 ## Deployment
-
 Use port 5017
 
-### Ressources
+TODO:
+https://medium.com/thelorry-product-tech-data/amazon-ec2-deployment-complete-ci-cd-pipeline-using-github-actions-and-aws-codedeploy-8a477123ff7e
 
+### Ressources
 - Multi-universer-webpage: https://www.npmjs.com/package/react-awesome-slider
-- gsap based orbital text https://codepen.io/vanstaen/pen/wvQryaP
-- cool webpage: https://madeinhaus.com/
-- also great : https://www.tomerlerner.com/
-- nice project division: https://www.cedricpereira.com/
-- effect to play with: https://minnim.tv/en
+- GSAP based orbital text https://codepen.io/vanstaen/pen/wvQryaP
+- Great webpage 1: https://madeinhaus.com/
+- Great webpage 2: https://www.tomerlerner.com/
+- Great webpage 3: https://www.cedricpereira.com/
+- Great webpage 4: https://minnim.tv/en

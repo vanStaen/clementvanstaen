@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
+import { Slider } from "./pages/Slider";
 import { Welcome } from "./pages/Welcome/Welcome";
 import { pageStore } from "./store/pageStore";
 
@@ -40,7 +41,7 @@ const App = observer(() => {
   }, [pageStore.language, i18n]);
 
   const router = createBrowserRouter(
-    createRoutesFromElements(<Route path="/" element={<Welcome />}></Route>)
+    createRoutesFromElements(<Route path="/" element={<Slider />}></Route>)
   );
 
   return (

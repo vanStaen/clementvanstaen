@@ -90,7 +90,7 @@ export const MyLinks = observer(() => {
         links={[
           {
             key: 10,
-            account: "van Staen",
+            account: "van Staen Music",
             url: "https://www.soundcloud.com/vanstaenmusic/",
           },
           {
