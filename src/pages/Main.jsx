@@ -7,20 +7,26 @@ import { Welcome } from "./Welcome/Welcome";
 
 export const Main = () => {
   return (
-    <div>
+    <>
       <AwesomeSlider
         animation="cubeAnimation"
         cssModule={[coreStyles, animationStyles]}
         fillParent={true}
         bullets={false}
       >
-        <div id="welcomePage">
+        <div key="welcomePage">
           <Welcome />
         </div>
-        <div id="placeholder1">placeholder 1</div>
-        <div id="placeholder2">placeholder 2</div>
-        <div id="placeholder3">placeholder 3</div>
+        <div style={{ backgroundColor: "Coral" }} key="placeholder1">
+          placeholder 1
+        </div>
+        <div style={{ backgroundColor: "DarkSlateGray" }} key="placeholder2">
+          placeholder 2
+        </div>
+        <div style={{ backgroundColor: "Pink" }} key="placeholder3">
+          placeholder 3
+        </div>
       </AwesomeSlider>
-    </div>
+    </>
   );
 };
