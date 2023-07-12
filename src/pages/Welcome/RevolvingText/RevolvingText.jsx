@@ -64,7 +64,10 @@ export const RevolvingText = observer(() => {
     for (var i = 0; i < words.length; i++) {
       splitLetters(words[i]);
     }
-    setInterval(changeWord, 3000);
+    const refreshIntervalId = setInterval(changeWord, 3000);
+    return () => {
+      clearInterval(refreshIntervalId);
+    };
   }, []);
 
   return (
