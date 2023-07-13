@@ -1,18 +1,20 @@
 @control-button-width: 10%;
 @control-button-height: 25%;
 @control-button-opacity: 0.5;
-@control-button-opacity-hover: 0.95;
+@control-button-opacity-hover: 0.9;
 @control-button-background: transparent;
 @transition-bezier: cubic-bezier(0.5, 0.075, 0.25, 0.95);
 @organic-arrow-thickness: 4px;
 @organic-arrow-height: 40px;
-@organic-arrow-color: #6a6a6a;
+@organic-arrow-color: #6a6a6a; // or #fff if darker background
 @organic-arrow-border-radius: 0;
 @cos45: 0.7071;
 
 .controls {
 
   .next, .prev {
+
+    z-index: 2;
 
     @media all and (max-width: 520px) {
       visibility: hidden;
@@ -82,13 +84,26 @@
         top: 50%;
         transform: rotate(-45deg);
       }
-    }
-
-    &:hover {
-      .arrowLeft,
-      .arrowRight {
+      &:hover {
         opacity: @control-button-opacity-hover;
+        &:before {
+          transform: rotate(30deg);
+        }
+        &:after {
+          transform: rotate(-30deg);
+        }
       }
+    }
+    .arrowRight {
+      &:hover {
+        opacity: @control-button-opacity-hover;
+        &:before {
+          transform: rotate(-30deg);
+        }
+        &:after {
+          transform: rotate(30deg);
+        }
+    }
     }
   } 
 
@@ -114,30 +129,6 @@
       }
       &:before {
         transform: rotate(90deg) translate3d(-50%, 0, 0) !important;
-      }
-    }
-  }
-
-  &:hover {
-    .arrowLeft {
-      &:before {
-        opacity: 1;
-        transform: rotate(30deg);
-      }
-
-      &:after {
-        opacity: 1;
-        transform: rotate(-30deg);
-      }
-    }
-    .arrowRight {
-      &:before {
-        opacity: 1;
-        transform: rotate(-30deg);
-      }
-      &:after {
-        opacity: 1;
-        transform: rotate(30deg);
       }
     }
   }

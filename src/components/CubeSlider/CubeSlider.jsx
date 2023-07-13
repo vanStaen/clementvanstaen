@@ -6,7 +6,7 @@ export const CubeSlider = (props) => {
   const { pages } = props;
 
   return (<>
-    <Buttons />
-    {pages[1]}
+    <Buttons theme='dark'/>
+    {pages[0]}
   </>);
 };
