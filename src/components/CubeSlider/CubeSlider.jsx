@@ -1,9 +1,12 @@
 import React from "react";
 
+import { Buttons } from './Buttons/Buttons';
+
 export const CubeSlider = (props) => {
   const { pages } = props;
 
-  //https://www.youtube.com/watch?v=SK9AlIbexOE
-
-  return <>{pages[0]}</>;
+  return (<>
+    <Buttons />
+    {pages[1]}
+  </>);
 };
