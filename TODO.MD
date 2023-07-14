@@ -2,11 +2,8 @@
 
 ## Content
 - [ ] Project Pages
-  - [ ] Vinticious
-  - [ ] deux francs berlin
-  - [ ] Purzelbaum Records
-  - [ ] The Antiquariat
-  - [ ] Mira Lykke
+  - [ ] Music
+  - [ ] Handwerk
 
 ## Tech debt
 - [ ] Darkmode https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8
