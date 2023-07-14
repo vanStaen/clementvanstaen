@@ -11,17 +11,27 @@
         top: 0;
         left: 0;
         position: absolute;
-    }
+
+        .openeyes {
+            position: absolute;
+            margin-top: -75px;
+            margin-right: -20px;
+            width: min(450px, 50vw);
+            height: min(150px, 20vh);
+            border: 1px solid transparent;
+        }   
+     }
      .background {
         z-index: 0;
         width: 100vw;
         height: 100vh;
-        background-image: url('../../img/vanStaenWhite.jpg'); 
+        background-image: url('../../img/vanStaenWhiteClose.jpg'); 
         background-size: cover;
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        transition: background-image .2s ease-in-out;
         top: 0;
         left: 0;
      }

@@ -6,9 +6,13 @@
 @transition-bezier: cubic-bezier(0.5, 0.075, 0.25, 0.95);
 @organic-arrow-thickness: 4px;
 @organic-arrow-height: 40px;
-@organic-arrow-color: #6a6a6a; // or #fff if darker background
 @organic-arrow-border-radius: 0;
 @cos45: 0.7071;
+
+:root {
+  --organic-arrow-color: #fff;
+}
+
 
 .controls {
 
@@ -51,7 +55,7 @@
             (@cos45 * (@organic-arrow-height + @organic-arrow-thickness)) / 2);
         height: 100%;
         width: @organic-arrow-thickness;
-        background-color: @organic-arrow-color;
+        background-color: var(--organic-arrow-color);
         transition: transform 0.15s ease-out, background-color 0.15s ease-out;
       }
 
