@@ -9,13 +9,22 @@ export const Main = () => {
     <div key="welcomePage">
       <Welcome />
     </div>,
-    <div style={{ backgroundColor: "Coral" }} key="placeholder1">
+    <div
+      style={{ backgroundColor: "Coral", height: "100vh" }}
+      key="placeholder1"
+    >
       placeholder 1
     </div>,
-    <div style={{ backgroundColor: "DarkSlateGray" }} key="placeholder2">
+    <div
+      style={{ backgroundColor: "DarkSlateGray", height: "100vh" }}
+      key="placeholder2"
+    >
       placeholder 2
     </div>,
-    <div style={{ backgroundColor: "Pink" }} key="placeholder3">
+    <div
+      style={{ backgroundColor: "Pink", height: "100vh" }}
+      key="placeholder3"
+    >
       placeholder 3
     </div>,
   ];
