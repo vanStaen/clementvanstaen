@@ -10,6 +10,7 @@ export const RevolvingText = observer(() => {
     "Woodworker",
     "Boulderer",
     "Music producer",
+    "Photogrpaher",
   ];*/
   const wordArray = [];
   var currentWord = 0;
@@ -79,7 +80,6 @@ export const RevolvingText = observer(() => {
         <span className="word">Musician</span>
         <span className="word">Woodworker</span>
         <span className="word">Photographer</span>
-        <span className="word">Artist</span>
       </p>
     </div>
   );
