@@ -1,7 +1,7 @@
 import React from "react";
 import { observer } from "mobx-react";
 
-import { RevolvingText } from "./RevolvingText/RevolvingText";
+import { RevolvingText } from "../../components/RevolvingText/RevolvingText";
 import { MyLinks } from "./myLinks/MyLinks";
 
 import vanStaenWhiteOpen from "../../img/vanStaenWhiteOpen.jpg";
