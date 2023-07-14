@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { observer } from "mobx-react";
 
 import "./Buttons.less";
 
-export const Buttons = observer(() => {
+export const Buttons = observer((props) => {
+  useEffect(() => {
+    if (props.color) {
+      document
+        .querySelector(":root")
+        .style.setProperty("--organic-arrow-color", props.color);
+    }
+  }, []);
+
   const handleControlClick = (elementId) => {
     const element = document.getElementById(elementId);
     element.classList.add("active");
