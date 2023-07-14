@@ -8,7 +8,7 @@ export const CubeSlider = (props) => {
   return (
     <>
       <Buttons color="#6a6a6a" />
-      {pages[1]}
+      {pages[0]}
     </>
   );
 };
