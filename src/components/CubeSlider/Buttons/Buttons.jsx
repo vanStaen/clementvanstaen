@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
-import { observer } from "mobx-react";
+
+import { cubeSliderStore } from "../cubeSliderStore";
 
 import "./Buttons.less";
 
-export const Buttons = observer((props) => {
+export const Buttons = (props) => {
   useEffect(() => {
     if (props.color) {
       document
@@ -16,6 +17,21 @@ export const Buttons = observer((props) => {
     const element = document.getElementById(elementId);
     element.classList.add("active");
     setTimeout(() => {
+      if (elementId === "arrowRight") {
+        const nextPage = cubeSliderStore.pageShown + 1;
+        if (nextPage > props.numPages - 1) {
+          cubeSliderStore.setPageShown(0);
+        } else {
+          cubeSliderStore.setPageShown(nextPage);
+        }
+      } else if (elementId === "arrowLeft") {
+        const prevPage = cubeSliderStore.pageShown - 1;
+        if (prevPage < 0) {
+          cubeSliderStore.setPageShown(props.numPages - 1);
+        } else {
+          cubeSliderStore.setPageShown(prevPage);
+        }
+      }
       element.classList.remove("active");
     }, 500);
   };
@@ -32,4 +48,4 @@ export const Buttons = observer((props) => {
       </div>
     </>
   );
-});
+};

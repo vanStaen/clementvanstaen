@@ -12,8 +12,6 @@ import "./Welcome.less";
 export const Welcome = observer(() => {
   useEffect(() => {
     //preload the background images
-    new Image().src = vanStaenWhiteOpen;
-    new Image().src = vanStaenWhiteClose;
   }, []);
 
   const handleOnMouseDown = () => {
