@@ -10,7 +10,14 @@ export const CubeSlider = observer((props) => {
   return (
     <>
       <Buttons color="#6a6a6a" numPages={pages.length} />
-      {pages[cubeSliderStore.pageShown]}
+      <div className="cubeAnimation">
+        <div className="container">
+          {pages[1]}
+        </div>
+        <div className="container">
+          {pages[2]}
+        </div>
+      </div>
     </>
   );
 });
