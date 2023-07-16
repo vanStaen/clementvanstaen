@@ -24,15 +24,12 @@ export class CubeSliderStore {
 
   setPageShown = (pageShown) => {
     if (pageShown + 1 > this.pagesLength - 1 ) {
-      console.log("end right")
       this.setPageNext(0)
       this.setPagePrev(pageShown - 1)
     } else if (pageShown - 1 < 0 ) {
-      console.log("end left", this.pagesLength - 1)
       this.setPageNext(pageShown + 1)
       this.setPagePrev(this.pagesLength - 1)
     } else {
-      console.log("middle")
       this.setPageNext(pageShown + 1)
       this.setPagePrev(pageShown - 1)      
     }    

@@ -17,13 +17,11 @@ export const Welcome = observer(() => {
   const handleOnMouseDown = () => {
     const element = document.getElementById("welcome__background");
     element.style.backgroundImage = `url(${vanStaenWhiteOpen})`;
-    console.log("handleOnMouseDown");
   };
 
   const handleOnMouseUp = () => {
     const element = document.getElementById("welcome__background");
     element.style.backgroundImage = `url(${vanStaenWhiteClose})`;
-    console.log("handleOnMouseUp");
   };
 
   return (
