@@ -10,13 +10,19 @@ export const Main = () => {
       <Welcome />
     </div>,
     <div
-      style={{ backgroundColor: "Coral", height: "100vh" }}
+      style={{
+        backgroundColor: "Coral",
+        height: "200vh",
+      }}
       key="placeholder1"
     >
       placeholder 1
     </div>,
     <div
-      style={{ backgroundColor: "DarkSlateGray", height: "100vh" }}
+      style={{
+        backgroundColor: "DarkSlateGray",
+        height: "100vh",
+      }}
       key="placeholder2"
     >
       placeholder 2
@@ -30,7 +36,7 @@ export const Main = () => {
   ];
   return (
     <>
-      <CubeSlider pages={pages} />
+      <CubeSlider pages={pages} defaultPage={0} />
     </>
   );
 };

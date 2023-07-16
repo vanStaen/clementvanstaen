@@ -18,19 +18,9 @@ export const Buttons = (props) => {
     element.classList.add("active");
     setTimeout(() => {
       if (elementId === "arrowRight") {
-        const nextPage = cubeSliderStore.pageShown + 1;
-        if (nextPage > props.numPages - 1) {
-          cubeSliderStore.setPageShown(0);
-        } else {
-          cubeSliderStore.setPageShown(nextPage);
-        }
+        cubeSliderStore.showRight();
       } else if (elementId === "arrowLeft") {
-        const prevPage = cubeSliderStore.pageShown - 1;
-        if (prevPage < 0) {
-          cubeSliderStore.setPageShown(props.numPages - 1);
-        } else {
-          cubeSliderStore.setPageShown(prevPage);
-        }
+        cubeSliderStore.showLeft();
       }
       element.classList.remove("active");
     }, 500);
@@ -39,12 +29,19 @@ export const Buttons = (props) => {
   return (
     <>
       <div className="controls">
-        <div className="next" onClick={() => handleControlClick("arrowRight")}>
-          <span id="arrowRight" className="arrowRight" />
-        </div>
-        <div className="prev" onClick={() => handleControlClick("arrowLeft")}>
-          <span id="arrowLeft" className="arrowLeft" />
-        </div>
+        {cubeSliderStore.pagePrev !== null && (
+          <div className="prev" onClick={() => handleControlClick("arrowLeft")}>
+            <span id="arrowLeft" className="arrowLeft" />
+          </div>
+        )}
+        {cubeSliderStore.pageNext !== null && (
+          <div
+            className="next"
+            onClick={() => handleControlClick("arrowRight")}
+          >
+            <span id="arrowRight" className="arrowRight" />
+          </div>
+        )}
       </div>
     </>
   );
