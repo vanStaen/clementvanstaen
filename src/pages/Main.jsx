@@ -1,7 +1,6 @@
 import React from "react";
 
 import { CubeSlider } from "../components/CubeSlider/CubeSlider";
-
 import { Welcome } from "./Welcome/Welcome";
 
 export const Main = () => {
@@ -34,6 +33,7 @@ export const Main = () => {
       placeholder 3
     </div>,
   ];
+
   return (
     <>
       <CubeSlider pages={pages} defaultPage={0} />

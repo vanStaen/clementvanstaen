@@ -48,12 +48,16 @@ export class CubeSliderStore {
     this.pageNext = pageNext;
   };
 
-  showRight = () => {
+  showRight = (target) => {
+    if (target === this.pageShown ) { return } 
+    if (target) { this.setPageNext(target) }
     const cube = document.querySelector(".cube");
     cube.style.transition = "transform 1s";
     cube.classList.add("show-right");
     setTimeout(() => {
-      if (this.pageShown + 1 > this.pagesLength - 1) {
+      if (target) {
+        this.setPageShown(target);
+      } else if (this.pageShown + 1 > this.pagesLength - 1) {
         this.setPageShown(0);
       } else {
         this.setPageShown(this.pageShown + 1);
@@ -63,12 +67,16 @@ export class CubeSliderStore {
     }, 1000);
   }
 
-  showLeft = () => {      
+  showLeft = (target) => {      
+    if (target === this.pageShown ) { return } 
+    if (target) { this.setPagePrev(target) } 
     const cube = document.querySelector(".cube");
     cube.style.transition = "transform 1s";
     cube.classList.add("show-left");
     setTimeout(() => {
-      if (this.pageShown - 1 < 0) {
+      if (target) {
+        this.setPageShown(target);
+      } else if (this.pageShown - 1 < 0) {
         this.setPageShown(this.pagesLength - 1);
       } else {
         this.setPageShown(this.pageShown - 1);
