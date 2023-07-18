@@ -48,7 +48,7 @@ export const CubeSlider = observer((props) => {
 
   return (
     <>
-      <Buttons color="#fff" numPages={pages.length} />
+      <Buttons color="#6a6a6a" numPages={pages.length} />
       <div
         className="cubeContainer"
         onTouchStart={onTouchStart}
