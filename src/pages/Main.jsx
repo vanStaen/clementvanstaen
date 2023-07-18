@@ -11,7 +11,8 @@ export const Main = () => {
     <div
       style={{
         backgroundColor: "Coral",
-        height: "200vh",
+        width: "100vw",
+        height: "100vh",
       }}
       key="placeholder1"
     >
@@ -20,6 +21,7 @@ export const Main = () => {
     <div
       style={{
         backgroundColor: "DarkSlateGray",
+        width: "100vw",
         height: "100vh",
       }}
       key="placeholder2"
@@ -27,7 +29,7 @@ export const Main = () => {
       placeholder 2
     </div>,
     <div
-      style={{ backgroundColor: "Pink", height: "100vh" }}
+      style={{ backgroundColor: "Pink", width: "100vw", height: "100vh" }}
       key="placeholder3"
     >
       placeholder 3
