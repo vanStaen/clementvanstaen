@@ -15,17 +15,18 @@ export const Welcome = observer(() => {
   }, []);
 
   const handleOnMouseDown = () => {
-    const element = document.getElementById("welcome__background");
-    element.style.backgroundImage = `url(${vanStaenWhiteOpen})`;
+    const element = document.getElementById("container");
+    element.style.setProperty('--backgroundWhiteMan', `url(${vanStaenWhiteOpen})`);
+
   };
 
   const handleOnMouseUp = () => {
-    const element = document.getElementById("welcome__background");
-    element.style.backgroundImage = `url(${vanStaenWhiteClose})`;
+    const element = document.getElementById("container");
+    element.style.setProperty('--backgroundWhiteMan', `url(${vanStaenWhiteClose})`);
   };
 
   return (
-    <div className="container">
+    <div className="container" id="container">
       <div className="welcome">
         <RevolvingText />
         <MyLinks />
@@ -35,7 +36,7 @@ export const Welcome = observer(() => {
           onMouseLeave={handleOnMouseUp}
         ></div>
       </div>
-      <div className="background" id="welcome__background"></div>
+      <div className="background"></div>
     </div>
   );
 });

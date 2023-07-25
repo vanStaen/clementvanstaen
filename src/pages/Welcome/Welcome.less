@@ -1,4 +1,6 @@
 .container {
+    --backgroundWhiteMan: url('../../img/vanStaenWhiteClose.jpg');
+
     .welcome {  
         text-align: center;
         display: flex;
@@ -22,11 +24,13 @@
         }   
      }
      .background {
+        position: absolute;
         z-index: 0;
         width: 100vw;
         height: 100vh;
-        background-image: url('../../img/vanStaenWhiteClose.jpg'); 
-        background-size: cover;
+        background-image: var(--backgroundWhiteMan); 
+        background-color: cyan;
+        background-blend-mode: lighten;
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
@@ -34,5 +38,30 @@
         transition: background-image .2s ease-in-out;
         top: 0;
         left: 0;
+
+        &:after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1;
+            background-image: var(--backgroundWhiteMan); 
+            background-color: red;
+            background-blend-mode: lighten;
+            background-size: cover;
+            mix-blend-mode: darken;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: background-image .2s ease-in-out;
+            animation: show-overlap 10s linear infinite alternate;
+        }
+
+        @keyframes show-overlap {
+        0% { margin-left: 0px }
+        100% { margin-left: 10px}
+}
+
      }
 }
