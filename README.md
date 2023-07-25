@@ -22,3 +22,5 @@ https://medium.com/thelorry-product-tech-data/amazon-ec2-deployment-complete-ci-
 - Cool glitch effects: https://freefrontend.com/css-text-glitch-effects/
 - paralax effect: https://www.youtube.com/watch?v=Yo3j_Dx4u7c
 - 3d transform: https://3dtransforms.desandro.com/carousel
+- Cool text chaos in css : https://developer.mozilla.org/en-US/docs/Web/CSS/text-orientation
+- 3d glasses effect in css: https://una.im/3d-effect/ or https://codepen.io/una/pen/epvReb
