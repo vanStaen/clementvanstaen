@@ -24,3 +24,4 @@ https://medium.com/thelorry-product-tech-data/amazon-ec2-deployment-complete-ci-
 - 3d transform: https://3dtransforms.desandro.com/carousel
 - Cool text chaos in css : https://developer.mozilla.org/en-US/docs/Web/CSS/text-orientation
 - 3d glasses effect in css: https://una.im/3d-effect/ or https://codepen.io/una/pen/epvReb
+- animation on scroll : https://www.youtube.com/watch?v=T33NN_pPeNI 
