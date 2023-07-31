@@ -14,15 +14,20 @@ export const Welcome = observer(() => {
     //preload the background images
   }, []);
 
-  const handleOnMouseDown = () => {
+  const handleOnMouseEnter = () => {
     const element = document.getElementById("container");
-    element.style.setProperty('--backgroundWhiteMan', `url(${vanStaenWhiteOpen})`);
-
+    element.style.setProperty(
+      "--backgroundWhiteMan",
+      `url(${vanStaenWhiteOpen})`
+    );
   };
 
-  const handleOnMouseUp = () => {
+  const handleOnMouseLeave = () => {
     const element = document.getElementById("container");
-    element.style.setProperty('--backgroundWhiteMan', `url(${vanStaenWhiteClose})`);
+    element.style.setProperty(
+      "--backgroundWhiteMan",
+      `url(${vanStaenWhiteClose})`
+    );
   };
 
   return (
@@ -32,8 +37,8 @@ export const Welcome = observer(() => {
         <MyLinks />
         <div
           className="openeyes"
-          onMouseEnter={handleOnMouseDown}
-          onMouseLeave={handleOnMouseUp}
+          onMouseEnter={handleOnMouseEnter}
+          onMouseLeave={handleOnMouseLeave}
         ></div>
       </div>
       <div className="background"></div>
