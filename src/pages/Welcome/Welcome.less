@@ -46,6 +46,7 @@
             width: 100vw;
             height: 100vh;
             z-index: 1;
+            margin-left: 5px;
             background-image: var(--backgroundWhiteMan); 
             background-color: red;
             background-blend-mode: lighten;
@@ -55,13 +56,24 @@
             background-position: center;
             background-repeat: no-repeat;
             transition: background-image .2s ease-in-out;
-            //animation: show-overlap 1s ease infinite alternate;
+            //animation: stack 7s cubic-bezier(.46,.29,0,1.24) infinite;
         } 
 
-        //@keyframes show-overlap {
-        //0% { margin-left: -15px }
-        //100% { margin-left: 15px}
-        //}
+        @keyframes stack {
+            0% {
+              margin-left: 0;
+            }
+            20% {
+              margin-left: 5px;
+            }
+            21% {
+              margin-left: -5px;
+            }
+            22%, 100% {
+              margin-left: 0;
+            }
+          }
+
 
      }
 }

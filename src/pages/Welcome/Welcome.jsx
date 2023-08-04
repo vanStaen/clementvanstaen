@@ -33,7 +33,7 @@ export const Welcome = observer(() => {
   return (
     <div className="container" id="container">
       <div className="welcome">
-        <RevolvingText />
+        {/*<RevolvingText />*/}
         <MyLinks />
         <div
           className="openeyes"
