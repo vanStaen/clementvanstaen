@@ -12,6 +12,7 @@ https://medium.com/thelorry-product-tech-data/amazon-ec2-deployment-complete-ci-
 ### Ressources
 
 - Multi-universer-webpage: https://www.npmjs.com/package/react-awesome-slider
+- Spiral photo gallery : https://www.youtube.com/watch?v=EJGbYTf356w
 - GSAP based orbital text https://codepen.io/vanstaen/pen/wvQryaP
 - Great webpage 1: https://madeinhaus.com/
 - Great webpage 2: https://www.tomerlerner.com/
