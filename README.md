@@ -25,5 +25,11 @@ https://medium.com/thelorry-product-tech-data/amazon-ec2-deployment-complete-ci-
 - 3d transform: https://3dtransforms.desandro.com/carousel
 - Cool text chaos in css : https://developer.mozilla.org/en-US/docs/Web/CSS/text-orientation
 - 3d glasses effect in css: https://una.im/3d-effect/ or https://codepen.io/una/pen/epvReb
-- animation on scroll : https://www.youtube.com/watch?v=T33NN_pPeNI
+- animation on scroll : https://www.youtube.com/watch?v=T33NN_pPeNI 
+- LSD effet on images : https://codepen.io/VincentPeters/pen/MGJNQW
+- noisy screen background: https://codepen.io/iceable/pen/yLBrZOd
+- great idea for a 404 page: https://codepen.io/YusukeNakaya/pen/xNdvKW
+- trippy background: https://codepen.io/robdimarzo/pen/VqjvqR
 - great webpage : https://sansho.studio/
+- gradient background following cursor: https://codepen.io/lsammarco/pen/waMpJw
+- library of box shadow : https://getcssscan.com/css-box-shadow-examples
