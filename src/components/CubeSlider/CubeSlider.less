@@ -1,16 +1,16 @@
 @cube-face-width: 100vw;
-@cube-face-height: 100vh;
 @cube-background-color: #000;
 
 .cubeContainer {
+  --cube-face-height: 100vh;
   width: @cube-face-width;
-  height: @cube-face-height;
+  height: var(----cube-face-height);
   perspective: calc(@cube-face-width * 2);  
   position: fixed;
 
   .cube {
     width: @cube-face-width;
-    height: @cube-face-height;
+    height: var(----cube-face-height);
     position: relative;
     transform-style: preserve-3d;
     transform: translateZ(calc((@cube-face-width / 2) * -1));
@@ -18,7 +18,7 @@
   
   .cube__full--screen {
     width: @cube-face-width;
-    height: @cube-face-height;
+    height: var(----cube-face-height);
     background-color: @cube-background-color;
     display: flex;
     flex-direction: column;
@@ -32,7 +32,7 @@
   .cube__face {
     position: absolute;
     width: @cube-face-width;
-    height: @cube-face-height;
+    height: var(----cube-face-height);
   }
 
   .cube__face--front  { transform: rotateY(  0deg) translateZ(calc(@cube-face-width / 2)); }

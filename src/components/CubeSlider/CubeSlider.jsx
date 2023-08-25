@@ -46,11 +46,29 @@ export const CubeSlider = observer((props) => {
     cubeSliderStore.setPageShown(defaultPageIndex ? defaultPageIndex : 0);
   }, [pages]);
 
+  useEffect(() => {
+    const element = document.getElementById("cubeContainer");
+    element.style.setProperty("--cube-face-height", window.innerHeight);
+  }, []);
+
+  const resizeHandler = () => {
+    const element = document.getElementById("cubeContainer");
+    element.style.setProperty("--cube-face-height", window.innerHeight);
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", resizeHandler);
+    return () => {
+      window.removeEventListener("resize", resizeHandler);
+    };
+  }, [resizeHandler]);
+
   return (
     <>
       <Buttons color="#6a6a6a" numPages={pages.length} />
       <div
         className="cubeContainer"
+        id="cubeContainer"
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
