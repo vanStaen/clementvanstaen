@@ -105,7 +105,7 @@ export const Welcome = observer(() => {
         />
         loading
       </div> :
-        <div className="welcome__background"></div>}
+        <div className="welcome__background" style={{ height: windowInnerHeight }}></div>}
     </div>
   );
 });
