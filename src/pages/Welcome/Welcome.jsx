@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, resetWindowInnerHeight } from "react";
 import { observer } from "mobx-react";
 
 import { RevolvingText } from "../../components/RevolvingText/RevolvingText";
@@ -10,8 +10,21 @@ import vanStaenWhiteClose from "../../img/vanStaenWhiteClose.jpg";
 import "./Welcome.less";
 
 export const Welcome = observer(() => {
+  const [windowInnerHeight, setWindowInnerHeight] = useState(window.innerHeight)
+
+  const resetWindowInnerHeight = () => {
+    setWindowInnerHeight(window.innerHeight);
+  }
+
   useEffect(() => {
-    //preload the background images
+    window.addEventListener("resize", resetWindowInnerHeight);
+    return () => {
+      window.removeEventListener("resize", resetWindowInnerHeight);
+    };
+  }, [resetWindowInnerHeight]);
+
+  useEffect(() => {
+    //TODO: preload the background images
   }, []);
 
   const handleOnMouseEnter = () => {
@@ -32,16 +45,17 @@ export const Welcome = observer(() => {
 
   return (
     <div className="container" id="container">
-      <div className="welcome">
+      <div className="welcome" style={{ height: windowInnerHeight }}>
         {/*<RevolvingText />*/}
         <MyLinks />
         <div
           className="openeyes"
+          style={{ height: windowInnerHeight }}
           onMouseEnter={handleOnMouseEnter}
           onMouseLeave={handleOnMouseLeave}
         ></div>
       </div>
-      <div className="background"></div>
+      <div className="background" style={{ height: windowInnerHeight }}></div>
     </div>
   );
 });
