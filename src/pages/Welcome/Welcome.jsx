@@ -18,6 +18,7 @@ import "./Welcome.less";
 const THRESHOLD_IN_PX_BEFORE_SHOWING_MOBILE_GALLERY = 520;
 
 export const Welcome = observer(() => {
+  const [isLoading, setIsLoading] = useState(true)
   const [windowInnerHeight, setWindowInnerHeight] = useState(window.innerHeight)
 
   const resizeHandler = () => {
@@ -39,9 +40,31 @@ export const Welcome = observer(() => {
     };
   }, [resizeHandler]);
 
+  const loadImages = async (imageClose, imageOpen) => {
+    const isloadedClose = new Promise((resolve, reject) => {
+      const loadImg = new Image();
+      loadImg.src = imageClose;
+      loadImg.onload = () => resolve(imageClose);
+      loadImg.onerror = (err) => reject(err);
+    });
+    const isloadedOpen = new Promise((resolve, reject) => {
+      const loadImg = new Image();
+      loadImg.src = imageOpen;
+      loadImg.onload = () => resolve(imageOpen);
+      loadImg.onerror = (err) => reject(err);
+    });
+    await isloadedClose;
+    await isloadedOpen;
+    setIsLoading(false);
+  };
+
   useEffect(() => {
     resizeHandler();
-    //TODO: preload the background images
+    if (isMobileCheck() || window.innerWidth < THRESHOLD_IN_PX_BEFORE_SHOWING_MOBILE_GALLERY) {
+      loadImages(vanStaenWhiteCloseMobile, vanStaenWhiteOpenMobile);
+    } else {
+      loadImages(vanStaenWhiteClose, vanStaenWhiteOpen);
+    }
   }, []);
 
   const handleOnMouseEnter = () => {
@@ -75,11 +98,12 @@ export const Welcome = observer(() => {
         >
         </div>
       </div>
-      {false ? <div className="welcome__loader">
+      {isLoading ? <div className="welcome__loader" style={{ height: windowInnerHeight }}>
         <LoadingOutlined
           spin
           className="welcome__imageLoading"
         />
+        loading
       </div> :
         <div className="welcome__background"></div>}
     </div>
