@@ -10,6 +10,7 @@ import { useTranslation } from "react-i18next";
 
 import { Main } from "./pages/Main";
 import { pageStore } from "./store/pageStore";
+import { consoleGreetings } from "./helpers/consoleGreetings";
 
 import "../src/lib/i18n";
 import "./App.less";
@@ -38,6 +39,10 @@ const App = observer(() => {
       i18n.changeLanguage("en-US");
     }
   }, [pageStore.language, i18n]);
+
+  useEffect(() => {
+    consoleGreetings();
+  }, []);
 
   const router = createBrowserRouter(
     createRoutesFromElements(<Route path="/" element={<Main />}></Route>)
