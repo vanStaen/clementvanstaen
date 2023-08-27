@@ -1,79 +1,104 @@
-.container {
-    --backgroundWhiteMan: url('../../img/vanStaenWhiteClose.jpg');
+.welcome__container {
+  --backgroundWhiteClose: url('../../img/vanStaenWhiteClose.jpg');
+  --backgroundWhiteOpen: url('../../img/vanStaenWhiteOpen.jpg');
 
-    .welcome {  
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        z-index: 1;
-        width: 100vw;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        position: absolute;
+  .welcome__welcome {  
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+      width: 100vw;
+      top: 0;
+      left: 0;
+      position: absolute;
 
-        .openeyes {
-            position: absolute;
-            margin-top: -75px;
-            margin-right: -20px;
-            width: min(450px, 50vw);
-            height: min(150px, 20vh);
-            border: 1px solid transparent;
-        }   
-     }
-     .background {
-        position: absolute;
-        z-index: 0;
-        width: 100vw;
-        height: 100vh;
-        background-image: var(--backgroundWhiteMan); 
-        background-color: cyan;
-        background-blend-mode: lighten;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        transition: background-image .2s ease-in-out;
-        top: 0;
-        left: 0;
-
-        &:after {
-            content: '';
-            position: absolute;
-            display: block;
-            width: 100vw;
-            height: 100vh;
-            z-index: 1;
-            margin-left: 5px;
-            background-image: var(--backgroundWhiteMan); 
-            background-color: red;
-            background-blend-mode: lighten;
-            background-size: cover;
-            mix-blend-mode: darken;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            transition: background-image .2s ease-in-out;
-            //animation: stack 7s cubic-bezier(.46,.29,0,1.24) infinite;
-        } 
-
-        @keyframes stack {
-            0% {
-              margin-left: 0;
-            }
-            20% {
-              margin-left: 5px;
-            }
-            21% {
-              margin-left: -5px;
-            }
-            22%, 100% {
-              margin-left: 0;
-            }
+      .welcome__openeyes {
+          position: absolute;
+          margin-top: -75px;
+          margin-right: -20px;
+          width: min(450px, 50vw);
+          height: min(150px, 20vh);
+          border: 1px solid transparent;
+          @media all and (max-width: 520px) {
+            bottom: 200px;
           }
-
-
-     }
+      }   
+  }
+  
+  .welcome__background {
+      position: absolute;
+      z-index: 0;
+      width: 100vw;
+      background-image: var(--backgroundWhiteClose); 
+      background-color: cyan;
+      background-blend-mode: lighten;
+      background-attachment: fixed;
+      background-position: bottom;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: background-image .2s ease-in-out;
+      top: 0;
+      left: 0;
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100vw;
+        height: 100%;
+        z-index: 1;
+        margin-left: 5px;
+        background-image: var(--backgroundWhiteClose); 
+        background-color: red;
+        background-blend-mode: lighten;
+        background-size: cover;
+        mix-blend-mode: darken;
+        background-attachment: fixed;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        transition: background-image .2s ease-in-out;
+        //animation: stack 5s cubic-bezier(.46,.29,0,1.24) infinite;
+      } 
+      @keyframes stack {
+          0% {
+            margin-left: 15px;
+          }
+          3% {
+            margin-left: -5px;
+          }
+          4% {
+            background-image: var(--backgroundWhiteOpen); 
+          }
+          6% {
+            margin-left: 5px;
+          }
+          10% ,100% {
+            margin-left: 5px;
+            background-image: var(--backgroundWhiteClose); 
+          }
+        }
+      }
+  .welcome__loader {
+      position: absolute;
+      z-index: 0;
+      width: 100vw;
+      background-color: white;
+      top: 0;
+      left: 0; 
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: black;
+      font-size: 14px;
+      font-weight: 300;
+      letter-spacing: 3px;
+      .welcome__imageLoading {
+        color: rgba(33, 33, 33, .25);
+        font-size: 52px;
+        margin-bottom: 20px;
+      }
+  }
 }
