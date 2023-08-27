@@ -14,24 +14,40 @@ import vanStaenWhiteCloseMobile from "../../img/vanStaenWhiteCloseMobile.jpg";
 
 import "./Welcome.less";
 
-
-const THRESHOLD_IN_PX_BEFORE_SHOWING_MOBILE_GALLERY = 520;
+const THRESHOLD_IN_PX_BEFORE_SHOWING_MOBILE_GALLERY = 670;
 
 export const Welcome = observer(() => {
-  const [isLoading, setIsLoading] = useState(true)
-  const [windowInnerHeight, setWindowInnerHeight] = useState(window.innerHeight)
+  const [isLoading, setIsLoading] = useState(true);
+  const [windowInnerHeight, setWindowInnerHeight] = useState(
+    window.innerHeight
+  );
 
   const resizeHandler = () => {
     setWindowInnerHeight(window.innerHeight);
     const element = document.getElementById("container");
-    if (isMobileCheck() || window.innerWidth < THRESHOLD_IN_PX_BEFORE_SHOWING_MOBILE_GALLERY) {
-      element.style.setProperty("--backgroundWhiteClose", `url(${vanStaenWhiteCloseMobile})`);
-      element.style.setProperty("--backgroundWhiteOpen", `url(${vanStaenWhiteOpenMobile})`);
+    if (
+      isMobileCheck() ||
+      window.innerWidth < THRESHOLD_IN_PX_BEFORE_SHOWING_MOBILE_GALLERY
+    ) {
+      element.style.setProperty(
+        "--backgroundWhiteClose",
+        `url(${vanStaenWhiteCloseMobile})`
+      );
+      element.style.setProperty(
+        "--backgroundWhiteOpen",
+        `url(${vanStaenWhiteOpenMobile})`
+      );
     } else {
-      element.style.setProperty("--backgroundWhiteClose", `url(${vanStaenWhiteClose})`);
-      element.style.setProperty("--backgroundWhiteOpen", `url(${vanStaenWhiteOpen})`);
+      element.style.setProperty(
+        "--backgroundWhiteClose",
+        `url(${vanStaenWhiteClose})`
+      );
+      element.style.setProperty(
+        "--backgroundWhiteOpen",
+        `url(${vanStaenWhiteOpen})`
+      );
     }
-  }
+  };
 
   useEffect(() => {
     window.addEventListener("resize", resizeHandler);
@@ -60,7 +76,10 @@ export const Welcome = observer(() => {
 
   useEffect(() => {
     resizeHandler();
-    if (isMobileCheck() || window.innerWidth < THRESHOLD_IN_PX_BEFORE_SHOWING_MOBILE_GALLERY) {
+    if (
+      isMobileCheck() ||
+      window.innerWidth < THRESHOLD_IN_PX_BEFORE_SHOWING_MOBILE_GALLERY
+    ) {
       loadImages(vanStaenWhiteCloseMobile, vanStaenWhiteOpenMobile);
     } else {
       loadImages(vanStaenWhiteClose, vanStaenWhiteOpen);
@@ -69,20 +88,38 @@ export const Welcome = observer(() => {
 
   const handleOnMouseEnter = () => {
     const element = document.getElementById("container");
-    console.log('here');
-    if (isMobileCheck() || window.innerWidth < THRESHOLD_IN_PX_BEFORE_SHOWING_MOBILE_GALLERY) {
-      element.style.setProperty("--backgroundWhiteClose", `url(${vanStaenWhiteOpenMobile})`);
+    console.log("here");
+    if (
+      isMobileCheck() ||
+      window.innerWidth < THRESHOLD_IN_PX_BEFORE_SHOWING_MOBILE_GALLERY
+    ) {
+      element.style.setProperty(
+        "--backgroundWhiteClose",
+        `url(${vanStaenWhiteOpenMobile})`
+      );
     } else {
-      element.style.setProperty("--backgroundWhiteClose", `url(${vanStaenWhiteOpen})`);
+      element.style.setProperty(
+        "--backgroundWhiteClose",
+        `url(${vanStaenWhiteOpen})`
+      );
     }
   };
 
   const handleOnMouseLeave = () => {
     const element = document.getElementById("container");
-    if (isMobileCheck() || window.innerWidth < THRESHOLD_IN_PX_BEFORE_SHOWING_MOBILE_GALLERY) {
-      element.style.setProperty("--backgroundWhiteClose", `url(${vanStaenWhiteCloseMobile})`);
+    if (
+      isMobileCheck() ||
+      window.innerWidth < THRESHOLD_IN_PX_BEFORE_SHOWING_MOBILE_GALLERY
+    ) {
+      element.style.setProperty(
+        "--backgroundWhiteClose",
+        `url(${vanStaenWhiteCloseMobile})`
+      );
     } else {
-      element.style.setProperty("--backgroundWhiteClose", `url(${vanStaenWhiteClose})`);
+      element.style.setProperty(
+        "--backgroundWhiteClose",
+        `url(${vanStaenWhiteClose})`
+      );
     }
   };
 
@@ -95,17 +132,19 @@ export const Welcome = observer(() => {
           className="welcome__openeyes"
           onMouseEnter={handleOnMouseEnter}
           onMouseLeave={handleOnMouseLeave}
-        >
-        </div>
+        ></div>
       </div>
-      {isLoading ? <div className="welcome__loader" style={{ height: windowInnerHeight }}>
-        <LoadingOutlined
-          spin
-          className="welcome__imageLoading"
-        />
-        loading
-      </div> :
-        <div className="welcome__background" style={{ height: windowInnerHeight }}></div>}
+      {isLoading ? (
+        <div className="welcome__loader" style={{ height: windowInnerHeight }}>
+          <LoadingOutlined spin className="welcome__imageLoading" />
+          loading
+        </div>
+      ) : (
+        <div
+          className="welcome__background"
+          style={{ height: windowInnerHeight }}
+        ></div>
+      )}
     </div>
   );
 });
