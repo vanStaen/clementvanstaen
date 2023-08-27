@@ -88,7 +88,6 @@ export const Welcome = observer(() => {
 
   const handleOnMouseEnter = () => {
     const element = document.getElementById("container");
-    console.log("here");
     if (
       isMobileCheck() ||
       window.innerWidth < THRESHOLD_IN_PX_BEFORE_SHOWING_MOBILE_GALLERY
