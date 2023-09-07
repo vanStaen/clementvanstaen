@@ -50,7 +50,7 @@ export const LinkElement = observer((props) => {
 
   if (props.links.length === 1) {
     return (
-      <div className="link">
+      <div className="link linkElement">
         <div
           className="container"
           style={{
@@ -87,7 +87,7 @@ export const LinkElement = observer((props) => {
   }
 
   return (
-    <div className="link">
+    <div className="linkElement">
       <div
         className="container"
         style={{
