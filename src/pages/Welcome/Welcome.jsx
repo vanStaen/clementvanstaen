@@ -4,7 +4,8 @@ import { LoadingOutlined } from "@ant-design/icons";
 import { Spin } from "antd";
 
 import { RevolvingText } from "../../components/RevolvingText/RevolvingText";
-import { MyLinks } from "./myLinks/MyLinks";
+import { MenuLinks } from "./MenuLinks/MenuLinks";
+import { MenuWebProjects } from "./MenuWebProjects/MenuWebProjects";
 import { isMobileCheck } from "../../helpers/checkMobileTablet";
 
 import vanStaenWhiteOpen from "../../img/vanStaenWhiteOpen.jpg";
@@ -126,7 +127,8 @@ export const Welcome = observer(() => {
     <div className="welcome__container" id="container">
       <div className="welcome__welcome" style={{ height: windowInnerHeight }}>
         {/*<RevolvingText />*/}
-        <MyLinks />
+        <MenuLinks />
+        <MenuWebProjects />
         <div
           className="welcome__openeyes"
           onMouseEnter={handleOnMouseEnter}

@@ -27,7 +27,6 @@
         position: fixed;
         margin-top: 1.2em;
         padding-top: .8em;
-        text-align: left;
         color: #000;
         z-index: 1;
         text-align: right;
@@ -60,11 +59,29 @@
         color: #FFF;
     }
   
-    .logo:hover + .subContainer {
+    .linkName {
+        display: block;
+        position: fixed;
+        margin-top: 1.2em;
+        padding-top: .8em;
+        z-index: 1;
+        text-align: right;
+        font-size: 17px;
+        border: 1px solid transparent;
+        border-top: 1px solid rgba(0,0,0,.1);
+        margin-top: .25em;
+        color: rgba(0,0,0,.15);
+        cursor: default;
+    }
+
+    .logo:hover + .subContainer,
+    .icon:hover + .subContainer,
+    .logo:hover + .linkName {
         display: block;
     }
 
-    .subContainer:hover {
+    .subContainer:hover,
+    .linkName:hover {
         display: block;
     } 
 
@@ -73,5 +90,17 @@
         margin-top: .25em;
         color: rgba(0,0,0,.15);
         cursor: default;
+    }
+
+    .icon {
+        font-size: 24px;
+        color: SteelBlue;
+        filter: grayscale(1);
+    }
+
+    @media only screen and (max-width: 600px) {
+        .icon {
+            font-size: 31px;
+        }
     }
 }

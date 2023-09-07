@@ -1,5 +1,6 @@
 import React from "react";
 import { observer } from "mobx-react";
+import { GlobalOutlined } from "@ant-design/icons";
 
 import "./LinkElement.less";
 
@@ -50,9 +51,37 @@ export const LinkElement = observer((props) => {
   if (props.links.length === 1) {
     return (
       <div className="link">
-        <a href={props.links[0].url} target="_blank">
-          <img className="logo" src={props.logo} />
-        </a>
+        <div
+          className="container"
+          style={{
+            justifyContent: props.align && props.align,
+          }}
+          onMouseEnter={() => handleMouseEnterContainer(`logo_${props.name}`)}
+          onMouseLeave={() => handleMouseLeaveContainer(`logo_${props.name}`)}
+        >
+          {props.logo ? (
+            <img
+              className="logo"
+              src={props.logo}
+              id={`logo_${props.name}`}
+              onClick={() => window.open(props.links[0].url, "_blank")}
+            />
+          ) : (
+            <GlobalOutlined
+              id={`logo_${props.name}`}
+              className="icon"
+              onClick={() => window.open(props.links[0].url, "_blank")}
+            />
+          )}
+          <div
+            className="subContainer"
+            style={{
+              textAlign: props.align && props.align,
+            }}
+          >
+            <div className="name">{props.name}</div>
+          </div>
+        </div>
       </div>
     );
   }
@@ -61,11 +90,23 @@ export const LinkElement = observer((props) => {
     <div className="link">
       <div
         className="container"
+        style={{
+          justifyContent: props.align && props.align,
+        }}
         onMouseEnter={() => handleMouseEnterContainer(`logo_${props.name}`)}
         onMouseLeave={() => handleMouseLeaveContainer(`logo_${props.name}`)}
       >
-        <img className="logo" src={props.logo} id={`logo_${props.name}`} />
-        <div className="subContainer">
+        {props.logo ? (
+          <img className="logo" src={props.logo} id={`logo_${props.name}`} />
+        ) : (
+          <GlobalOutlined id={`logo_${props.name}`} className="icon" />
+        )}
+        <div
+          className="subContainer"
+          style={{
+            textAlign: props.align && props.align,
+          }}
+        >
           {formatedSubMenu}
           <div className="name">{props.name}</div>
         </div>

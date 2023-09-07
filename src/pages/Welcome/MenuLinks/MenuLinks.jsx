@@ -5,25 +5,14 @@ import InstaLogo from "../../../img/logos/instaLogo.png";
 import SpotifyLogo from "../../../img/logos/spotifyLogo.png";
 import SoundcloudLogo from "../../../img/logos/soundcloudLogo.png";
 import YoutubeLogo from "../../../img/logos/youtubeLogo.png";
-//import GithubLogo from "../../../img/logos/githubLogo.png";
 
 import { LinkElement } from "./LinkElement";
 
-import "./MyLinks.less";
+import "./MenuLinks.less";
 
-export const MyLinks = observer(() => {
+export const MenuLinks = observer(() => {
   return (
     <div className="containerLink">
-      {/*<LinkElement
-        name="Github"
-        logo={GithubLogo}
-        links={[
-          {
-            account: "vanStaen",
-            url: "https://github.com/vanStaen/",
-          },
-        ]}
-      />*/}
       <LinkElement
         name="Instagram"
         logo={InstaLogo}
