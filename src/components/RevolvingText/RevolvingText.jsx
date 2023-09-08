@@ -72,7 +72,7 @@ export const RevolvingText = observer(() => {
   }, []);
 
   return (
-    <div className="revolving__container">
+    <div className="revolving__container" id="revolving__container">
       <div className="text">
         <p>I am a </p>&nbsp;
         <p>

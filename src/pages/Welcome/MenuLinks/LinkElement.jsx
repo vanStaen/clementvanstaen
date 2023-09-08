@@ -24,11 +24,15 @@ export const LinkElement = observer((props) => {
   const handleMouseEnterContainer = (element) => {
     const container = document.getElementById(element);
     container.style.filter = "grayscale(0)";
+    const revolvingContainer = document.getElementById("revolving__container");
+    revolvingContainer.style.opacity = 0;
   };
 
   const handleMouseLeaveContainer = (element) => {
     const container = document.getElementById(element);
     container.style.filter = "grayscale(1)";
+    const revolvingContainer = document.getElementById("revolving__container");
+    revolvingContainer.style.opacity = 1;
   };
 
   const formatedSubMenu = props.links.map((link) => {

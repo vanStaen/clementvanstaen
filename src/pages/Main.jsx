@@ -2,13 +2,16 @@ import React, { useState, useEffect } from "react";
 
 import { CubeSlider } from "../components/CubeSlider/CubeSlider";
 import { Welcome } from "./Welcome/Welcome";
+import { Craft } from "./Craft/Craft";
 
 export const Main = () => {
-  const [windowInnerHeight, setWindowInnerHeight] = useState(window.innerHeight)
+  const [windowInnerHeight, setWindowInnerHeight] = useState(
+    window.innerHeight
+  );
 
   const resetWindowInnerHeight = () => {
     setWindowInnerHeight(window.innerHeight);
-  }
+  };
 
   useEffect(() => {
     window.addEventListener("resize", resetWindowInnerHeight);
@@ -21,15 +24,8 @@ export const Main = () => {
     <div key="welcomePage">
       <Welcome />
     </div>,
-    <div
-      style={{
-        backgroundColor: "Coral",
-        width: "100vw",
-        height: windowInnerHeight,
-      }}
-      key="placeholder1"
-    >
-      placeholder 1
+    <div key="craftPage">
+      <Craft />
     </div>,
     <div
       style={{
@@ -42,7 +38,11 @@ export const Main = () => {
       placeholder 2
     </div>,
     <div
-      style={{ backgroundColor: "Pink", width: "100vw", height: windowInnerHeight }}
+      style={{
+        backgroundColor: "Pink",
+        width: "100vw",
+        height: windowInnerHeight,
+      }}
       key="placeholder3"
     >
       placeholder 3
