@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { observer } from "mobx-react";
 import { LoadingOutlined } from "@ant-design/icons";
-import { Spin } from "antd";
 
 import { RevolvingText } from "../../components/RevolvingText/RevolvingText";
 import { MenuLinks } from "./MenuLinks/MenuLinks";
@@ -126,7 +125,7 @@ export const Welcome = observer(() => {
   return (
     <div className="welcome__container" id="container">
       <div className="welcome__welcome" style={{ height: windowInnerHeight }}>
-        {/*<RevolvingText />*/}
+        <RevolvingText />
         <MenuLinks />
         <MenuWebProjects />
         <div
