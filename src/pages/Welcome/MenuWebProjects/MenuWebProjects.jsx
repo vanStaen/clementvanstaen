@@ -46,8 +46,10 @@ export const MenuWebProjects = observer(() => {
         name="Github"
         logo={GithubLogo}
         align="left"
+        color="rgba(115, 58, 156, .75)"
         links={[
           {
+            key: 21,
             account: "vanStaen",
             url: "https://github.com/vanStaen/",
           },
