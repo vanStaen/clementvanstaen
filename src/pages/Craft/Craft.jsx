@@ -19,8 +19,9 @@ export const Craft = () => {
   }, [resetWindowInnerHeight]);
 
   return (
-    <div className="craft__container" style={{ height: windowInnerHeight }}>
-      Craft
+    <div className="craft__container" style={{ minHeight: windowInnerHeight }}>
+      <div className="title">Arts & Crafts</div>
+      <div className="fourOFour">comming up next</div>
     </div>
   );
 };
