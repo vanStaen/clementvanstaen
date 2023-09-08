@@ -20,13 +20,23 @@ export const MenuWebProjects = observer(() => {
             account: "Rewaer",
             url: "https://www.rewaer.com/",
           },
-          {
+          /*{
             key: 17,
+            account: "Merrier",
+            url: "https://www.merrier.app/",
+          },
+          {
+            key: 18,
+            account: "Kinkograph",
+            url: "https://www.kinkograph.com/",
+          },*/
+          {
+            key: 19,
             account: "Todogether",
             url: "https://www.todogether.com/",
           },
           {
-            key: 18,
+            key: 20,
             account: "Schwerelos Berlin",
             url: "https://www.schwerelos-berlin.com/",
           },
