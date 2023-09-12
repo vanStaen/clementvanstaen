@@ -26,7 +26,7 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [
-        { from: "public/avatar.jpg" },
+        { from: "public/inital.png" },
         { from: "public/manifest.webmanifest" },
       ],
     }),
