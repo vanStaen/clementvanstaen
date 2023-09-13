@@ -23,7 +23,7 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [
-        { from: "public/initial.png" },
+        { from: "public/rubik.png" },
         { from: "public/manifest.webmanifest" },
         { from: "public/CNAME" },
       ],

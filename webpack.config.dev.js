@@ -26,7 +26,7 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [
-        { from: "public/inital.png" },
+        { from: "public/rubik.png" },
         { from: "public/manifest.webmanifest" },
       ],
     }),
