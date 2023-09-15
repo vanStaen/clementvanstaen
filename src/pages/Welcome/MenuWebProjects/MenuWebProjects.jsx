@@ -35,7 +35,7 @@ export const MenuWebProjects = observer(() => {
             account: "Todogether",
             url: "https://www.todogether.com/",
           },
-          /*{
+          {
             key: 20,
             account: "Schwerelos Berlin",
             url: "https://www.schwerelos-berlin.com/",
@@ -44,7 +44,7 @@ export const MenuWebProjects = observer(() => {
             key: 21,
             account: "Le Kreubergois",
             url: "https://www.lekreuzbergois.com/",
-          },*/
+          },
         ]}
       />
       <LinkElement
