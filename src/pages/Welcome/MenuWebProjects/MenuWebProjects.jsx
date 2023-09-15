@@ -24,12 +24,12 @@ export const MenuWebProjects = observer(() => {
             key: 17,
             account: "Merrier",
             url: "https://www.merrier.app/",
-          },
+          },*/
           {
             key: 18,
             account: "Kinkograph",
             url: "https://www.kinkograph.com/",
-          },*/
+          },
           {
             key: 19,
             account: "Todogether",
@@ -39,6 +39,11 @@ export const MenuWebProjects = observer(() => {
             key: 20,
             account: "Schwerelos Berlin",
             url: "https://www.schwerelos-berlin.com/",
+          },
+          {
+            key: 21,
+            account: "Le Kreubergois",
+            url: "https://www.lekreuzbergois.com/",
           },
         ]}
       />
