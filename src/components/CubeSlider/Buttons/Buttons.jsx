@@ -41,12 +41,13 @@ export const Buttons = (props) => {
   }, [keyDownHandler]);
 
   useEffect(() => {
+    console.log("color", props.color);
     if (props.color) {
       document
         .querySelector(":root")
         .style.setProperty("--organic-arrow-color", props.color);
     }
-  }, []);
+  }, [props.color]);
 
   const handleControlClick = (elementId) => {
     if (throttling.current === false) {

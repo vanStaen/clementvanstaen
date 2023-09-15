@@ -9,7 +9,6 @@ import "./CubeSlider.less";
 export const CubeSlider = observer((props) => {
   const { pages, defaultPageIndex } = props;
   const throttling = useRef(false);
-
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
 
@@ -54,7 +53,7 @@ export const CubeSlider = observer((props) => {
   const resizeHandler = () => {
     const element = document.getElementById("cubeContainer");
     element.style.setProperty("--cube-face-height", window.innerHeight);
-  }
+  };
 
   useEffect(() => {
     window.addEventListener("resize", resizeHandler);
@@ -65,7 +64,10 @@ export const CubeSlider = observer((props) => {
 
   return (
     <>
-      <Buttons color="#6a6a6a" numPages={pages.length} />
+      <Buttons
+        color={pages[cubeSliderStore.pageShown].arrowColor}
+        numPages={pages.length}
+      />
       <div
         className="cubeContainer"
         id="cubeContainer"
@@ -76,17 +78,17 @@ export const CubeSlider = observer((props) => {
         <div className="cube">
           <div className="cube__face cube__face--left">
             <div className="cube__full--screen">
-              {pages[cubeSliderStore.pagePrev]}
+              {pages[cubeSliderStore.pagePrev].page}
             </div>
           </div>
           <div className="cube__face cube__face--front">
             <div className="cube__full--screen">
-              {pages[cubeSliderStore.pageShown]}
+              {pages[cubeSliderStore.pageShown].page}
             </div>
           </div>
           <div className="cube__face cube__face--right">
             <div className="cube__full--screen">
-              {pages[cubeSliderStore.pageNext]}
+              {pages[cubeSliderStore.pageNext].page}
             </div>
           </div>
         </div>

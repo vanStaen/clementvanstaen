@@ -4,7 +4,9 @@
 
 - [ ] Project Pages
   - [ ] Music
-  - [ ] Handwerk
+  - [ ] Craft & art
+  - [ ] Web Projects
+    - [ ] Link from welcome page scrolls to projects
 
 ## Tech debt
 
