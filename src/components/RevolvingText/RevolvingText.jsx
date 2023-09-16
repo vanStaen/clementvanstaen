@@ -1,9 +1,26 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { observer } from "mobx-react";
 
 import "./RevolvingText.less";
 
 export const RevolvingText = observer(() => {
+  const [windowInnerHeight, setWindowInnerHeight] = useState(
+    window.innerHeight
+  );
+  const [windowInnerWidth, setWindowInnerWidth] = useState(window.innerWidth);
+
+  const resetWindowInner = () => {
+    setWindowInnerHeight(window.innerHeight);
+    setWindowInnerWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", resetWindowInner);
+    return () => {
+      window.removeEventListener("resize", resetWindowInner);
+    };
+  }, [resetWindowInner]);
+
   const words = document.getElementsByClassName("word");
   /*const words = [
     "Frontend Developer",
@@ -72,7 +89,14 @@ export const RevolvingText = observer(() => {
   }, []);
 
   return (
-    <div className="revolving__container" id="revolving__container">
+    <div
+      className="revolving__container"
+      id="revolving__container"
+      style={{
+        bottom:
+          windowInnerWidth > 670 ? "30px" : windowInnerHeight * 0.8 + "px",
+      }}
+    >
       <div className="text">
         <p>I am a </p>&nbsp;
         <p>

@@ -3,50 +3,43 @@ import React, { useState, useEffect } from "react";
 import { CubeSlider } from "../components/CubeSlider/CubeSlider";
 import { Welcome } from "./Welcome/Welcome";
 import { Craft } from "./Craft/Craft";
+import { Music } from "./Music/Music";
+import { Web } from "./Web/Web";
 
 export const Main = () => {
-  const [windowInnerHeight, setWindowInnerHeight] = useState(
-    window.innerHeight
-  );
-
-  const resetWindowInnerHeight = () => {
-    setWindowInnerHeight(window.innerHeight);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", resetWindowInnerHeight);
-    return () => {
-      window.removeEventListener("resize", resetWindowInnerHeight);
-    };
-  }, [resetWindowInnerHeight]);
-
   const pages = [
-    <div key="welcomePage">
-      <Welcome />
-    </div>,
-    <div key="craftPage">
-      <Craft />
-    </div>,
-    <div
-      style={{
-        backgroundColor: "DarkSlateGray",
-        width: "100vw",
-        height: windowInnerHeight,
-      }}
-      key="placeholder2"
-    >
-      placeholder 2
-    </div>,
-    <div
-      style={{
-        backgroundColor: "Pink",
-        width: "100vw",
-        height: windowInnerHeight,
-      }}
-      key="placeholder3"
-    >
-      placeholder 3
-    </div>,
+    {
+      arrowColor: "rgba(200,200,200,1)",
+      page: (
+        <div key="welcomePage">
+          <Welcome />
+        </div>
+      ),
+    },
+    {
+      arrowColor: "rgba(150,150,150,1)",
+      page: (
+        <div key="craftPage">
+          <Craft />
+        </div>
+      ),
+    },
+    {
+      arrowColor: "rgba(150,150,150,1)",
+      page: (
+        <div key="musicPage">
+          <Music />
+        </div>
+      ),
+    },
+    {
+      arrowColor: "rgba(100,100,100,1)",
+      page: (
+        <div key="webPage">
+          <Web />
+        </div>
+      ),
+    },
   ];
 
   return (
