@@ -41,7 +41,6 @@ export const Buttons = (props) => {
   }, [keyDownHandler]);
 
   useEffect(() => {
-    console.log("color", props.color);
     if (props.color) {
       document
         .querySelector(":root")
