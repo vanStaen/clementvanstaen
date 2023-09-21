@@ -26,6 +26,7 @@ https://medium.com/thelorry-product-tech-data/amazon-ec2-deployment-complete-ci-
 - trippy background: https://codepen.io/robdimarzo/pen/VqjvqR
 - gradient background following cursor: https://codepen.io/lsammarco/pen/waMpJw
 - library of box shadow : https://getcssscan.com/css-box-shadow-examples
+- Goey effect on pictures : https://tympanus.net/Tutorials/GooeyImageHoverEffects/
 
  #### Great websites
 - https://evervault.com/
