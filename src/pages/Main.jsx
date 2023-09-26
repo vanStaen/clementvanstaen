@@ -17,18 +17,18 @@ export const Main = () => {
       ),
     },
     {
-      arrowColor: "rgba(150,150,150,1)",
+      arrowColor: "rgba(255,255,255,1)",
       page: (
-        <div key="craftPage">
-          <Craft />
+        <div key="musicPage">
+          <Music />
         </div>
       ),
     },
     {
       arrowColor: "rgba(150,150,150,1)",
       page: (
-        <div key="musicPage">
-          <Music />
+        <div key="craftPage">
+          <Craft />
         </div>
       ),
     },
