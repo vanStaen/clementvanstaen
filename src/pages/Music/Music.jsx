@@ -21,7 +21,6 @@ export const Music = () => {
   return (
     <div className="music__container" style={{ minHeight: windowInnerHeight }}>
       <div className="title">Music</div>
-      <div className="fourOFour">comming up next</div>
     </div>
   );
 };
