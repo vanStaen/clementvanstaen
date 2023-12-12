@@ -42,15 +42,26 @@
 
         .web__projectList {
             display: inline-flex;
+            vertical-align: middle;
             cursor: pointer;
             &:hover {
                 opacity: .5;
+            }
+            .web__badge { 
+                position: relative;
+                top: 6px;
+                border: 1px solid transparent;
+                height: 10px;
+                width: 10px;
+                margin-right: 8px;
+                border-radius: 5px;
             }
         }
 
         .web__projectListSpacer{
             display: inline-flex;
             padding: 0 20px;
+            opacity: .15;
         }
 
         .web__projectListSelected {
@@ -61,8 +72,8 @@
             }
         }
 
-        .web__projectDesc{
-            padding-top: calc(150px - 5vw);
+        .web__projectDesc {
+            padding-top: calc(120px - 5vw);
             font-size: .8em;
             font-weight: 300;
             letter-spacing: 5px;
@@ -104,3 +115,22 @@
         }
     }
 }
+
+@media only screen and (max-width: 670px) {
+    .web__container {
+        .web__projectListContainer {
+            top: 80px;
+            font-size: .5em; 
+            line-height: 25px;
+            .web__projectListSpacer{
+                display: none;
+            }
+            .web__projectList {
+                .web__badge { 
+                    top: 7px;
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+  }

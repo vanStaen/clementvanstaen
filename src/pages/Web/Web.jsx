@@ -26,11 +26,30 @@ export const Web = () => {
     <div className="web__container" style={{ minHeight: windowInnerHeight }}>
       <div className="title">Web Projects</div>
       <div className="web__projectListContainer">
-        <div className="web__projectList web__projectListSelected">rewaer</div>
+        <div className="web__projectList web__projectListSelected">
+          <div
+            className="web__badge"
+            style={{ backgroundColor: "#6d917e" }}
+          ></div>
+          rewaer
+        </div>
         <div className="web__projectListSpacer"> | </div>
-        <div className="web__projectList">kinkograph</div>
+        <div className="web__projectList">
+          <div
+            className="web__badge"
+            style={{ backgroundColor: "black" }}
+          ></div>
+          kinkograph
+        </div>
         <div className="web__projectListSpacer"> | </div>
-        <div className="web__projectList">todogether</div>
+        <div className="web__projectList">
+          {" "}
+          <div
+            className="web__badge"
+            style={{ backgroundColor: "#d9d6cb" }}
+          ></div>
+          todogether
+        </div>
         <div className="web__projectDesc">
           todo: Description of selected project
         </div>
