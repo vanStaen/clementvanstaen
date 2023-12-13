@@ -43,6 +43,7 @@
         .web__projectList {
             display: inline-flex;
             vertical-align: middle;
+            padding-bottom: 2px;
             cursor: pointer;
             &:hover {
                 opacity: .5;
@@ -65,8 +66,9 @@
         }
 
         .web__projectListSelected {
-            font-weight: 400;
-            text-shadow: 1px 1px 5px rgba(200,200,200,.3);
+            text-shadow: 1px 1px 5px rgba(200,200,200,.5);
+            border-bottom: 1px solid rgba(255,255,255,.25);
+            border-top: 1px solid rgba(255,255,255,.25);
             &:hover {
                 opacity: 1;
             }
