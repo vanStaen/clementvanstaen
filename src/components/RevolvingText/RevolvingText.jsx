@@ -54,7 +54,9 @@ export const RevolvingText = () => {
       id="revolving__container"
       style={{
         bottom:
-          windowInnerWidth > 670 ? "30px" : windowInnerHeight * 0.8 + "px",
+          windowInnerWidth > 670 ? "70px" : windowInnerHeight * 0.8 + "px",
+        textAlign: windowInnerWidth > 670 ? "right" : "center",
+        paddingRight: windowInnerWidth > 670 ? "20vw" : "0",
       }}
     >
       <div className="text">
