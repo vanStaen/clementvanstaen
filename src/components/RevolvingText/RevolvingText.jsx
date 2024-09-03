@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 
 import "./RevolvingText.less";
 
+const INTERVAL_REVOLUTION_IN_MILLI_SEC = 1500;
+
 export const RevolvingText = () => {
   const [windowInnerHeight, setWindowInnerHeight] = useState(
     window.innerHeight
@@ -42,7 +44,7 @@ export const RevolvingText = () => {
         words[currentWord].className = "word in";
       }, 80);
     };
-    const refreshIntervalId = setInterval(changeWord, 3000);
+    const refreshIntervalId = setInterval(changeWord, INTERVAL_REVOLUTION_IN_MILLI_SEC);
     return () => {
       clearInterval(refreshIntervalId);
     };
