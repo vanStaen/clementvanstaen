@@ -4,6 +4,8 @@ private showcase page
 
 ## Deployment
 
+`nvm use 20` Use node 20 to run the build. 
+
 Use port 5017
 
 TODO:
