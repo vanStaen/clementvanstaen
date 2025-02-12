@@ -51,6 +51,11 @@ export const MenuWebProjects = observer(() => {
             account: "Songboook",
             url: "https://www.songboook.com/",
           },*/
+          {
+            key: 23,
+            account: "Spielbetrieb",
+            url: "https://www.Spielbetrieb.eu/",
+          },
         ]}
       />
       <LinkElement
