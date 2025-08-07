@@ -38,7 +38,8 @@
       background-position: bottom;
       background-repeat: no-repeat;
       background-size: cover;
-      transition: background-image .2s ease-in-out;
+      transition: background-image .2s ease-in-out, filter .5s ease-in-out;
+      animation: darken 10s infinite;
       top: 0;
       left: 0;
       &:after {
@@ -78,7 +79,19 @@
             translate: 0vw 0;
           }
         }
-      }
+      @keyframes darken { 
+          0%, 50% {
+            filter: grayscale(0);
+          }
+          54% {
+            filter: grayscale(1);
+          }
+          59%, 100% {
+            filter: grayscale(0);
+          }
+        }
+  }
+    
   .welcome__loader {
       position: absolute;
       z-index: 0;
