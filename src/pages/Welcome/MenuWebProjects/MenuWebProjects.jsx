@@ -45,12 +45,13 @@ export const MenuWebProjects = observer(() => {
             key: 21,
             account: "Le Kreubergois",
             url: "https://www.lekreuzbergois.com/",
-          },
+          },*/
           {
             key: 22,
             account: "Songboook",
             url: "https://www.songboook.com/",
           },
+          /*
           {
             key: 23,
             account: "Spielbetrieb",
